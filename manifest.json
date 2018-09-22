@@ -1,0 +1,43 @@
+{
+    "manifest_version": 2,
+    "name": "SFS-Google Calendar Importer",
+    "description": "Import your courses from SFS to Google Calendar!",
+    "version": "0.01",
+    "author": "Taiyo Kato",
+    "content_scripts": [
+        {
+            "matches": [
+                "https://vu.sfc.keio.ac.jp/sfc-sfs/portal_s/s01.cgi"
+            ],
+            "js": [
+                "import.js"
+            ]
+        }
+    ],
+    "browser_action": {
+        "default_icon": "icon.png",
+        "default_title": "Course schedule importer",
+        "default_popup": "popup.html"
+    },
+    "background": {
+        "scripts": [
+            "background.js"
+        ],
+        "persistent": false
+    },
+    "options_ui": {
+        "page": "options.html",
+        "open_in_tab": true
+    },
+    "permissions": [
+        "activeTab",
+        "identity"
+    ],
+    "oauth2": {
+        "client_id": "482216694561-09rg4stlf764e5lo07p9libvc2b3fceu.apps.googleusercontent.com",
+        "scopes": [
+            "https://www.googleapis.com/auth/calendar"
+        ]
+    },
+    "key": "MIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQCP/NzG8WyOZ+Kivi3gpOmtiMX+rP8fCt9D0FlcX8mgngGHrvu9rVBl+TSzNUel4TjSevX9yjRAnOFILpjsNfkyDR5oNKem0E4qshKt0EpvGY398EeAuQGtWw+jWzZdn9EQGzs/T7sm+SxgbsC0ovndPaFmmRU3L+e8rFU+BCNot5rfBrxDNSHtC2ZFfEKZHJtul0nX0aSyXDX+979TAq44WMNuP6RyGdx3HhzOYZGdqdheC2EdssMf5Elsi+yvAACYxsoglqn58yLrfppA9gtJmz5yv5+rlKhgGB0HVfgVPpKvjPc4ljGdo1RVmXgahzH+0MgY8WZO9ArnfcZSxzA1AgMBAAECggEAIjPW/7zWZAdiSvUw8aVKyslr+sB+Q5HyEeo6Z9prCyetRl02+EnkiKyHK7CSyeDzfe/uYfA3tEdvrhU/hxCVFqIOIIOtdU8S2kp9bGNHYxenZnQ+j+Gid9rjHpMqmVe+sfw9+R6H3syekXONe/sgrkCXB8eCRh8vhV5MS1RxUsy7Fr+zM+ia8RGmDt28j+BEWiLlbzqxQ0gIcBNcdBKIAqsktf1Y95AO3M/ItbYyAHAev7ta/BoFOaE1jB5VlRAikRjhXeABfw6F84fxLvraEEMn5DCA6KLZ8wjd2mNre8ltKd56Um/KqhT0o2BIs+T2iSpZPNptIyqmMyU6kX73uwKBgQDD05ULO1B1YaInJ9w0zFo/vlXuQxX8B7JDy7R1GJ5QvXfJJ7zbWmZgthtCFcNHf6SGBAgs9HeZRcfdKvWrgQ3SfWpwjCwsopuk1PQSC/p8MetLBfYxPwv2mAv5CYIy0fKyVKkaIIsq0PCSAxecUlG55gutnANJYcSPSDLOgDdTswKBgQC8O3UUc9zl8PiRDvn9ehADfWvVL6WCGs1ns+dEFlAjFQ1F3mIcaQK23avpcGdemt2Ul7G1mtJO0Rm7NYsTxyGe0m4ghXQcnQ7XLOH9GqVr/4CFueOApGZhrpxcYCT9/B4nOd3/f0vbfrucXwGhkMenX2SPLuXwsow/pO0fuK+YdwKBgA/AvYShyN8oc3ri4fv9VGU8Un1QODyGAfkiMeoZiOLF2xT7dV3P79xnydmPFp5xzjJZsK6tG9HgoytPgWPChfIg1KcpH4SXsB2aY+fvvr6u5VarrBpaEARORuhJs4eTDAr8dH39kDRpinC0fvm8RYbG0rmsizcj/kPocu3ZspmxAoGBAKTItGV0TPTr8N8kqktyOWSkvusB7DWq+xkHELW1hvA/dMAuv9s5PwwRoXcaVRQoJUT5S7S9VdF0Er+mTxvAXzln5MsJqa2G/T/4ZdqrIhgatEvdgUHUKmDneLER5jCHL2qNqUAME7+TAfER5x6m3XIz+5exqdD+rfLlkkUL7IVfAoGBAKRa6b0+iC1kXUc7dKk5s+bMYw43jeEyN1y+5wRVQtGny4PWpteXTIrK4tGURQhQ4qgvdw7SVbsZe0f4XxUlkoB2Xj2IAKpxQO4QgzHufJMGl4Vx0Q0I+1W+/9/c2HpdtJ4aMr2PxMqqaqpcBqadgX5SQYTTi8/JRWophtJAhWaY"
+}
