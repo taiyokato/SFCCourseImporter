@@ -7,9 +7,10 @@
     "content_scripts": [
         {
             "matches": [
-                "https://vu.sfc.keio.ac.jp/sfc-sfs/portal_s/s01.cgi"
+                "https://vu.sfc.keio.ac.jp/sfc-sfs/portal_s/s01.cgi*"
             ],
             "js": [
+                "jquery.js",
                 "import.js"
             ]
         }

@@ -1,16 +1,58 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="ja">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-    <script src="import.js"></script>
+    <link rel="stylesheet" href="reset.css">
+    <script src="jquery.js"></script>
+    <script src="import.js" defer></script>
 </head>
+<style>
+   body {
+       min-width: 350px;
+   }
 
+   h1 {
+       background-color: #B6C3DC
+   }
+
+   body > div {
+       line-height: 1.5em;
+   }
+
+   .progress > li:not(.current_step) {
+       opacity: 0.3;
+   }
+
+   .progress > .current_step {
+       opacity: 1;
+   }
+
+</style>
+<script>
+    // var cur = $(".current_step");
+    // cur.toggleClass('current_step');
+    // cur.next().toggleClass('current_step');
+</script>
 <body>
-    <h1>Hello world popup</h1>
+    <div id="header">
+        <h1>SFS-GCalendar Importer</h1>
+    </div>
+    <!-- Each step should be highlighted/non step be dimmed -->
+    <div id="main">
+        <ul class="progress">
+            <li class="current_step">Sign in to SFS</li>
+            <li>Authenticate Google account</li>
+            <li>Obtain course list</li>
+            <li>Manually add other courses</li>
+            <li>Send courses to calendar</li>
+            <li>Done</li>
+        </ul>
+    </div>
+    <hr>
+    <div id="status">Current Status here</div>
 </body>
 
 </html>
